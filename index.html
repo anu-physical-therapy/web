@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJP7KKET3H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CJP7KKET3H');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áine - Physiotherapy Services</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/Logo.jpg" alt="Áine Logo" class="logo-img">
+                <span>Áine</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-logo">
+                    <img src="images/Logo.jpg" alt="Áine Logo" class="hero-logo-img">
+                </div>
+                <h1>Welcome to <span class="highlight">Áine's</span> Physiotherapy</h1>
+                <p>Specialized care for osteoporosis, vertebral fractures, and bone health.</p>
+                <a href="#contact" class="btn">Book a Consultation</a>
+            </div>
+        </section>
+        
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="content">
+                    <div class="bio-image-container">
+                        <img src="images/Aine.png" alt="Áine" class="bio-image">
+                    </div>
+                    <div class="text">
+                        <p>Áine (pronounced "Awn-ya") completed her Physiotherapy degrees in the UK - with a Master of Science in Physiotherapy from University College London; and, a Bachelor of Science in Physiotherapy at the University of Brighton.</p>
+                        
+                        <p>Following post-graduate training in orthopaedics, she became a Fellow of the Canadian Academy of Manipulative Physiotherapists. Having done a Masters thesis on how bone reacts to weight-bearing, she has a special interest in treatment of osteopenia, osteoporosis and vertebral fractures; and is certified in both BoneFit and OsteoCircuit to treat these conditions.</p>
+                        
+                        <p>She loves working with people who have been diagnosed with low bone mineral density, vertebral fractures, or fragility fractures through a personalised rehabilitation program designed for return of functional ability, balance retraining and falls prevention; and resisted exercises based on the latest Clinical Practice Guidelines for Osteoporosis care and rehabilitation.</p>
+                        
+                        <p>If you are frightened to move after your fracture experience, she will gently guide you through your rehabilitation stages, at your own pace, with a program based on a comprehensive initial OsteoCircuit assessment and with your specific goals and needs in mind.</p>
+                        
+                        <p>Outside of work, Áine enjoys long hikes with her dogs, sailing, knitting, and watching Canada win at hockey!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Specialized Services</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="icon">🦴</div>
+                        <h3>Osteoporosis Care</h3>
+                        <p>Specialized treatment for low bone mineral density and prevention of fragility fractures.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🏋️‍♀️</div>
+                        <h3>OsteoCircuit</h3>
+                        <p>Certified OsteoCircuit training for bone strength and fracture prevention.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">⚖️</div>
+                        <h3>Balance & Falls Prevention</h3>
+                        <p>Specialized training to improve balance and prevent falls.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🔄</div>
+                        <h3>Post-Fracture Rehabilitation</h3>
+                        <p>Gentle, personalized rehabilitation after vertebral and fragility fractures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonial">
+            <div class="container">
+                <blockquote>
+                    <p>"If you are frightened to move after your fracture experience, I will gently guide you through your rehabilitation stages, at your own pace, with a program based on a comprehensive initial OsteoCircuit assessment and with your specific goals and needs in mind."</p>
+                    <footer>— Áine</footer>
+                </blockquote>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <div class="contact-wrapper">
+                    <form class="contact-form" action="https://formspree.io/f/mjkyqklq" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone (optional)</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New inquiry from Aine's Website">
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <h4>Email</h4>
+                            <p><a href="mailto:anuphysicaltherapy@gmail.com">anuphysicaltherapy@gmail.com</a></p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+16047210177">+1-604-721-0177</a></p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Location</h4>
+                            <p>Forza Physiotherapy<br>
+                            658 Homer St,<br>
+                            Vancouver, BC V6B 2R4<br>
+                            <a href="https://www.forzaphysiotherapy.com/" target="_blank">www.forzaphysiotherapy.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Áine Physiotherapy</div>
+                <p>&copy; 2025 Áine. All rights reserved.</p>
+                <p class="version">v1.0.0-<a id="git-commit-link" href="https://github.com/anu-physical-therapy/web/commit/" target="_blank" title="View this version on GitHub"><span id="git-commit-hash">loading...</span></a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
