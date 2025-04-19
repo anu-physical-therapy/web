@@ -1,5 +1,5 @@
 // Git commit info - Auto-generated, do not edit manually
-const GIT_COMMIT_HASH = '9c46948';
+const GIT_COMMIT_HASH = '715ca92';
 const GIT_REPO_URL = 'https://github.com/anu-physical-therapy/web/commit/';
 
 document.addEventListener('DOMContentLoaded', () => {

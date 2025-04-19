@@ -6,9 +6,7 @@
   "scripts": {
     "start": "npx serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node js/git-version.js",
-    "prebuild": "echo 'Updating git version info...'",
-    "precommit": "npm run build"
+    "update-version": "node js/git-version.js"
   },
   "keywords": [
     "website",
