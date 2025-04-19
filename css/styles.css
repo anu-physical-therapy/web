@@ -252,7 +252,7 @@ section h2::after {
 
 /* Testimonial Section */
 .testimonial {
-    padding: 80px 0;
+    padding: 40px 0;
     background-color: var(--primary);
     color: white;
     text-align: center;
@@ -267,13 +267,16 @@ section h2::after {
 }
 
 .testimonial blockquote p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.testimonial blockquote footer {
+.testimonial blockquote .aine-quote {
     font-weight: 700;
     font-style: normal;
     font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .service-grid {
