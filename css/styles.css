@@ -77,9 +77,9 @@ nav {
 }
 
 .nav-org-logo {
-    height: 15px;
+    height: 24px;
     width: auto;
-    max-width: 40px;
+    max-width: 60px;
     transition: transform 0.3s;
 }
 
