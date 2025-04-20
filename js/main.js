@@ -1,14 +1,20 @@
+// Safely import the updated git values.
+import { GIT_COMMIT_HASH, GIT_REPO_URL } from './git-version.js';
+
 // Main JavaScript file
 
 document.addEventListener('DOMContentLoaded', () => {
     // Update git commit hash in footer - for deployed versions
     const gitCommitHash = document.getElementById('git-commit-hash');
     const gitDeployedLink = document.getElementById('git-deployed-link');
-    
-    // Check if git-version.js variables are available
-    if (typeof GIT_COMMIT_HASH !== 'undefined' && typeof GIT_REPO_URL !== 'undefined' && gitCommitHash && gitDeployedLink) {
+
+    if (gitCommitHash && gitDeployedLink) {
         gitCommitHash.textContent = GIT_COMMIT_HASH;
         gitDeployedLink.href = GIT_REPO_URL + GIT_COMMIT_HASH;
+    } else {
+        if (gitCommitHash) gitCommitHash.textContent = 'unknown';
+        if (gitDeployedLink) gitDeployedLink.href = '#';
+        console.error('Failed to update version info. Check element IDs: git-commit-hash or git-deployed-link.');
     }
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');

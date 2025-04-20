@@ -28,8 +28,8 @@ jobs:
           cat > js/git-version.js << EOF
           // Git commit info - Updated by GitHub Actions
           // The commit hash representing the exact version deployed to GitHub Pages
-          const GIT_COMMIT_HASH = '${COMMIT_HASH}';
-          const GIT_REPO_URL = 'https://github.com/${{ github.repository }}/commit/';
+          export const GIT_COMMIT_HASH = '${COMMIT_HASH}';
+          export const GIT_REPO_URL = 'https://github.com/${{ github.repository }}/commit/';
           EOF
 
       - name: Upload to GitHub Pages
