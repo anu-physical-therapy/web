@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const versionElement = document.querySelector('.version');
 
     // Update version from git tag
-    if (versionElement) {
-        // Replace the hardcoded version number with the dynamic one from git tags
-        versionElement.innerHTML = versionElement.innerHTML.replace(/v[0-9]+\.[0-9]+\.[0-9]+/, GIT_VERSION);
+    const versionTagElement = document.getElementById('git-version-tag');
+    if (versionTagElement) {
+        versionTagElement.textContent = GIT_VERSION;
     }
 
     // Update commit hash link
