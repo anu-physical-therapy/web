@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [master]
+  workflow_dispatch: # Add this to enable manual triggering
 
 permissions:
   contents: read
@@ -13,6 +14,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -31,11 +33,12 @@ jobs:
           export const GIT_COMMIT_HASH = '${COMMIT_HASH}';
           export const GIT_REPO_URL = 'https://github.com/${{ github.repository }}/commit/';
           EOF
-
+      - name: List files before upload
+        run: ls -R
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
-
+          path: ./
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
