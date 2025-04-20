@@ -168,11 +168,12 @@ nav {
 
 .btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 24px 60px;
     background-color: var(--primary);
     color: white;
     border-radius: var(--radius);
     font-weight: 500;
+    font-size: 1.5rem;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: var(--shadow);
 }
