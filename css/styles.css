@@ -367,6 +367,8 @@ section h2::after {
     font-size: 1.1rem;
     margin-bottom: 10px;
     color: var(--primary);
+    display: flex;
+    align-items: center;
 }
 
 .info-item p {
@@ -381,6 +383,24 @@ section h2::after {
 .info-item a:hover {
     color: var(--primary-light);
     text-decoration: underline;
+}
+
+.map-icon {
+    font-size: 2.5rem;
+    margin-left: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.cpa-logo {
+    max-width: 180px;
+    height: auto;
+    margin-top: 5px;
+    transition: transform 0.3s;
+}
+
+.cpa-link:hover .cpa-logo {
+    transform: scale(1.05);
 }
 
 /* Footer */
