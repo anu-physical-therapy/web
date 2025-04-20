@@ -21,10 +21,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Write version string
+      - name: Update version info
         run: |
           mkdir -p js
-          echo "document.getElementById('version').textContent = 'v${GITHUB_SHA::7}';" > js/version.js
+          cat > js/git-version.js << EOF
+          // Git commit info - Updated by GitHub Actions
+          // The commit hash representing the exact version deployed to GitHub Pages
+          const GIT_COMMIT_HASH = '${GITHUB_SHA::7}';
+          const GIT_REPO_URL = 'https://github.com/${{ github.repository }}/commit/';
+          EOF
 
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3

@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx serve",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "update-version": "node js/git-version.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "website",

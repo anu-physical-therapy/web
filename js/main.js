@@ -1,14 +1,14 @@
-// Git commit info - Auto-generated, do not edit manually
-const GIT_COMMIT_HASH = 'd7786a8';
-const GIT_REPO_URL = 'https://github.com/anu-physical-therapy/web/commit/';
+// Main JavaScript file
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Update git commit hash in footer
+    // Update git commit hash in footer - for deployed versions
     const gitCommitHash = document.getElementById('git-commit-hash');
-    const gitCommitLink = document.getElementById('git-commit-link');
-    if (gitCommitHash && gitCommitLink) {
+    const gitDeployedLink = document.getElementById('git-deployed-link');
+    
+    // Check if git-version.js variables are available
+    if (typeof GIT_COMMIT_HASH !== 'undefined' && typeof GIT_REPO_URL !== 'undefined' && gitCommitHash && gitDeployedLink) {
         gitCommitHash.textContent = GIT_COMMIT_HASH;
-        gitCommitLink.href = GIT_REPO_URL + GIT_COMMIT_HASH;
+        gitDeployedLink.href = GIT_REPO_URL + GIT_COMMIT_HASH;
     }
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
