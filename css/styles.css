@@ -68,8 +68,8 @@ nav {
 .nav-memberships {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin: 0 15px;
+    gap: 8px;
+    margin: 0 10px;
 }
 
 .nav-org-link {
@@ -77,8 +77,9 @@ nav {
 }
 
 .nav-org-logo {
-    height: 30px;
+    height: 15px;
     width: auto;
+    max-width: 40px;
     transition: transform 0.3s;
 }
 
@@ -416,6 +417,7 @@ section h2::after {
 .org-logo {
     max-width: 180px;
     height: auto;
+    min-height: 35px;
     margin: 8px 0;
     transition: transform 0.3s;
     display: inline-block;
