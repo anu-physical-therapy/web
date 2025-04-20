@@ -1,13 +1,21 @@
 // Safely import the updated git values.
-import { GIT_COMMIT_HASH, GIT_REPO_URL } from './git-version.js';
+import { GIT_COMMIT_HASH, GIT_REPO_URL, GIT_VERSION } from './git-version.js';
 
 // Main JavaScript file
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Update git commit hash in footer - for deployed versions
+    // Update git version and commit hash in footer
     const gitCommitHash = document.getElementById('git-commit-hash');
     const gitDeployedLink = document.getElementById('git-deployed-link');
+    const versionElement = document.querySelector('.version');
 
+    // Update version from git tag
+    if (versionElement) {
+        // Replace the hardcoded version number with the dynamic one from git tags
+        versionElement.innerHTML = versionElement.innerHTML.replace(/v[0-9]+\.[0-9]+\.[0-9]+/, GIT_VERSION);
+    }
+
+    // Update commit hash link
     if (gitCommitHash && gitDeployedLink) {
         gitCommitHash.textContent = GIT_COMMIT_HASH;
         gitDeployedLink.href = GIT_REPO_URL + GIT_COMMIT_HASH;

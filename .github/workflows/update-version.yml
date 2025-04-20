@@ -27,11 +27,17 @@ jobs:
         run: |
           mkdir -p js
           COMMIT_HASH=${GITHUB_SHA:0:7}
+          
+          # Get the latest tag that points to the current commit or any ancestor
+          # If no tag exists, use a default version
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.1")
+          
           cat > js/git-version.js << EOF
           // Git commit info - Updated by GitHub Actions
           // The commit hash representing the exact version deployed to GitHub Pages
           export const GIT_COMMIT_HASH = '${COMMIT_HASH}';
           export const GIT_REPO_URL = 'https://github.com/${{ github.repository }}/commit/';
+          export const GIT_VERSION = '${LATEST_TAG}';
           EOF
       - name: List files before upload
         run: ls -R
