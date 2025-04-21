@@ -1,0 +1,54 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Áine Physiotherapy",
+  "url": "https://anuphysiotherapy.com/",
+  "logo": "https://anuphysiotherapy.com/images/Logo.jpg",
+  "image": "https://anuphysiotherapy.com/images/Aine.png",
+  "description": "Specialized physiotherapy services focused on osteoporosis, vertebral fractures, and bone health.",
+  "medicalSpecialty": ["Physiotherapy", "Orthopedic Medicine"],
+  "serviceType": [
+    "Osteoporosis Care",
+    "OsteoCircuit",
+    "Balance & Falls Prevention", 
+    "Post-Fracture Rehabilitation"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "658 Homer St",
+    "addressLocality": "Vancouver",
+    "addressRegion": "BC",
+    "postalCode": "V6B 2R4",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 49.2803,
+    "longitude": -123.1161
+  },
+  "telephone": "+1-778-903-5568",
+  "email": "anuphysicaltherapy@gmail.com",
+  "priceRange": "$$",
+  "knowsAbout": [
+    "Osteoporosis", 
+    "Bone Health", 
+    "Vertebral Fractures", 
+    "Fragility Fractures", 
+    "Fall Prevention",
+    "Rehabilitation"
+  ],
+  "sameAs": [
+    "https://www.forzaphysiotherapy.com/"
+  ],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://forzaphysiotherapy.janeapp.com/#/staff_member/6"
+    },
+    "result": {
+      "@type": "Reservation",
+      "name": "Book a Consultation"
+    }
+  }
+}
